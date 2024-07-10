@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>API Table</title>
+    <meta name="description" content="AJAX/PHP/CURL/JSON example">
+    <link rel="stylesheet" href="libs/css/style.css">
+</head>
+<body>
+
+    <table>
+        <thead>
+            <tr>
+                <th>API Name</th>
+                <th>Description</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Country Info</td>
+                <td>
+                    <select id="countryInfoCountry">
+                        <option value="GB">Great Britain</option>
+                        <option value="FR">France</option>
+                        <option value="DE">Germany</option>
+                        <option value="US">USA</option>
+                    </select>
+                    <select id="countryInfoLang">
+                        <option value="en">English</option>
+                        <option value="fr">Français</option>
+                        <option value="de">Deutsch</option>
+                    </select>
+                </td>
+                <td><button class="btnSubmit" data-api="countryInfo">Submit</button></td>
+            </tr>
+            <tr>
+                <td>Timezone</td>
+                <td>
+                    <input type="text" id="timezoneLat" placeholder="Latitude" value="51.5074">
+                    <input type="text" id="timezoneLng" placeholder="Longitude" value="-0.1278">
+                </td>
+                <td><button class="btnSubmit" data-api="timezone">Submit</button></td>
+            </tr>
+            <tr>
+                <td> Places </td>
+                <td>
+                    <input type="text" id="nearbyLat" placeholder="Latitude" value="40.7128">
+                    <input type="text" id="nearbyLng" placeholder="Longitude" value="-74.0060">
+                </td>
+                <td><button class="btnSubmit" data-api="findNearbyPlaceName">Submit</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br><br>
+
+    <div id="divResults">
+        <h2>API Results</h2>
+        <div id="txtApiResult"></div>
+    </div>
+
+    <script type="application/javascript" src="libs/js/jquery-2.2.3.min.js"></script>
+    <script type="application/javascript" src="libs/js/script.js"></script>
+
+</body>
+</html>
